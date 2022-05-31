@@ -4,10 +4,10 @@ import {
   SeriesCollectionDirective,
   SeriesDirective,
   Inject,
+  LineSeries,
   DateTime,
   Legend,
   Tooltip,
-  LineSeries,
 } from '@syncfusion/ej2-react-charts';
 
 import {
@@ -28,12 +28,14 @@ const LineChart = () => {
       primaryYAxis={LinePrimaryYAxis}
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
-      background={currentMode === 'Dark' ? '#33373E' : '#ffffff'}
+      background={currentMode === 'Dark' ? '#33373E' : '#fff'}
+      legendSettings={{ background: 'white' }}
     >
       <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
       <SeriesCollectionDirective>
-        {lineCustomSeries.map((data, index) => (
-          <SeriesDirective {...data} key={index} />
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        {lineCustomSeries.map((item, index) => (
+          <SeriesDirective key={index} {...item} />
         ))}
       </SeriesCollectionDirective>
     </ChartComponent>

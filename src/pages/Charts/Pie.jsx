@@ -10,7 +10,7 @@ const Pie = () => (
       <PieChart
         id="chart-pie"
         data={pieChartData}
-        legendVisiblity
+        legendVisibility
         height="full"
       />
     </div>

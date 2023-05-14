@@ -35,11 +35,11 @@ const Financial = () => {
   const { currentMode } = useStateContext();
 
   return (
-    <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <ChartsHeader category="Financial" title="APPLE Historical" />
-      <div className="w-full">
+    <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
+      <ChartsHeader category='Financial' title='APPLE Historical' />
+      <div className='w-full'>
         <ChartComponent
-          id="charts"
+          id='charts'
           primaryXAxis={FinancialPrimaryXAxis}
           primaryYAxis={FinancialPrimaryYAxis}
           chartArea={{ border: { width: 0 } }}
@@ -60,12 +60,12 @@ const Financial = () => {
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={returnValue}
-              xName="x"
-              yName="low"
-              name="Apple Inc"
-              type="Hilo"
-              low="low"
-              high="high"
+              xName='x'
+              yName='low'
+              name='Apple Inc'
+              type='Hilo'
+              low='low'
+              high='high'
             />
           </SeriesCollectionDirective>
         </ChartComponent>
@@ -74,4 +74,4 @@ const Financial = () => {
   );
 };
 
-export default Financial;
+export default React.memo(Financial);

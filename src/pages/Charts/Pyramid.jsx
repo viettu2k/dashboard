@@ -63,4 +63,4 @@ const Pyramid = () => {
   );
 };
 
-export default Pyramid;
+export default React.memo(Pyramid);

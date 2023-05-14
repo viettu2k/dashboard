@@ -15,7 +15,7 @@ class SparkLine extends React.PureComponent {
         height={height}
         width={width}
         lineWidth={1}
-        valueType="Numeric"
+        valueType='Numeric'
         fill={color}
         border={{ color: currentColor, width: 2 }}
         tooltipSettings={{
@@ -28,8 +28,8 @@ class SparkLine extends React.PureComponent {
         }}
         markerSettings={{ visible: ['All'], size: 2.5, fill: currentColor }}
         dataSource={data}
-        xName="x"
-        yName="yval"
+        xName='x'
+        yName='yval'
         type={type}
       >
         <Inject services={[SparklineTooltip]} />
@@ -38,4 +38,4 @@ class SparkLine extends React.PureComponent {
   }
 }
 
-export default SparkLine;
+export default React.memo(SparkLine);

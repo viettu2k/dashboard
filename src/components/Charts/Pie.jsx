@@ -59,4 +59,4 @@ const Doughnut = ({ id, data, legendVisibility, height }) => {
   );
 };
 
-export default Doughnut;
+export default React.memo(Doughnut);

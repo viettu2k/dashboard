@@ -18,7 +18,7 @@ import { scheduleData } from '../data/dummy';
 import { Header } from '../components';
 
 // eslint-disable-next-line react/destructuring-assignment
-const PropertyPane = (props) => <div className="mt-5">{props.children}</div>;
+const PropertyPane = (props) => <div className='mt-5'>{props.children}</div>;
 
 const Scheduler = () => {
   const [scheduleObj, setScheduleObj] = useState();
@@ -34,10 +34,10 @@ const Scheduler = () => {
   };
 
   return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
-      <Header category="App" title="Calendar" />
+    <div className='m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl'>
+      <Header category='App' title='Calendar' />
       <ScheduleComponent
-        height="650px"
+        height='650px'
         ref={(schedule) => setScheduleObj(schedule)}
         selectedDate={new Date(2021, 0, 10)}
         eventSettings={{ dataSource: scheduleData }}
@@ -60,8 +60,8 @@ const Scheduler = () => {
                 <DatePickerComponent
                   value={new Date(2021, 0, 10)}
                   showClearButton={false}
-                  placeholder="Current Date"
-                  floatLabelType="Always"
+                  placeholder='Current Date'
+                  floatLabelType='Always'
                   change={change}
                 />
               </td>

@@ -25,14 +25,14 @@ const ColorMapping = () => {
   const { currentMode } = useStateContext();
 
   return (
-    <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
+    <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
       <ChartsHeader
-        category="Color Mapping"
-        title="USA CLIMATE - WEATHER BY MONTH"
+        category='Color Mapping'
+        title='USA CLIMATE - WEATHER BY MONTH'
       />
-      <div className="w-full">
+      <div className='w-full'>
         <ChartComponent
-          id="charts"
+          id='charts'
           primaryXAxis={ColorMappingPrimaryXAxis}
           primaryYAxis={ColorMappingPrimaryYAxis}
           chartArea={{ border: { width: 0 } }}
@@ -44,10 +44,10 @@ const ColorMapping = () => {
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={colorMappingData[0]}
-              name="USA"
-              xName="x"
-              yName="y"
-              type="Column"
+              name='USA'
+              xName='x'
+              yName='y'
+              type='Column'
               cornerRadius={{
                 topLeft: 10,
                 topRight: 10,
@@ -66,4 +66,4 @@ const ColorMapping = () => {
   );
 };
 
-export default ColorMapping;
+export default React.memo(ColorMapping);

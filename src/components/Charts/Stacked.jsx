@@ -22,7 +22,7 @@ const Stacked = ({ width, height }) => {
 
   return (
     <ChartComponent
-      id="charts"
+      id='charts'
       primaryXAxis={stackedPrimaryXAxis}
       primaryYAxis={stackedPrimaryYAxis}
       width={width}
@@ -43,4 +43,4 @@ const Stacked = ({ width, height }) => {
   );
 };
 
-export default Stacked;
+export default React.memo(Stacked);
